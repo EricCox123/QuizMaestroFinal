@@ -51,7 +51,7 @@ public class CreateCard extends Fragment {
 
                         Card card = new Card(question, answer);
                         Decks.addCardToDeck(mCurrentDeck, card);
-                        Snackbar.make(view, "Created card in deck: " + DeckPage.selectedDeck, Snackbar.LENGTH_LONG)
+                        Snackbar.make(view, "Added card to deck: " + mCurrentDeck + ".", Snackbar.LENGTH_LONG)
                                 .setAction("Action", null).show();
                         StudyPage studyPage = new StudyPage();
                         fragmentTransaction.replace(R.id.content_frame, studyPage, "createDeck")

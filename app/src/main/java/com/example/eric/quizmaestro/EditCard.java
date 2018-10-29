@@ -15,6 +15,7 @@ import android.widget.EditText;
 public class EditCard extends AppCompatActivity {
 
     private Button mEditCard;
+    private Button mDeleteCard;
     private EditText mEditQuestion;
     private EditText mEditAnswer;
 
@@ -26,30 +27,39 @@ public class EditCard extends AppCompatActivity {
         mEditQuestion = findViewById(R.id.edit_card_question);
         mEditAnswer = findViewById(R.id.edit_card_answer);
         mEditCard = findViewById(R.id.edit_card_button);
+        mDeleteCard = findViewById(R.id.delete_card_button);
 
         mEditQuestion.setHint(CardAdapter.selectedCard.getQuestion());
         mEditAnswer.setHint(CardAdapter.selectedCard.getAnswer());
 
-        mEditCard.setOnTouchListener(new View.OnTouchListener() {
+        mEditCard.setOnClickListener(new View.OnClickListener() {
             @Override
-            public boolean onTouch(View view, MotionEvent motionEvent) {
-                switch (motionEvent.getAction()) {
-                    // Once button has been released
-                    case MotionEvent.ACTION_UP:
-                        String question = mEditQuestion.getText().toString();
-                        String answer = mEditAnswer.getText().toString();
+            public void onClick(View view) {
+                String question = mEditQuestion.getText().toString();
+                String answer = mEditAnswer.getText().toString();
 
-                        Decks.updateCard(DeckPage.selectedDeck, CardAdapter.selectedCard, question, answer);
+                Decks.updateCard(DeckPage.selectedDeck, CardAdapter.selectedCard, question, answer);
 
-                        StudyPage.mAdapter.notifyDataSetChanged();
+                StudyPage.mAdapter.notifyDataSetChanged();
 
-                        Context context = view.getContext();
-                        Intent intent = new Intent(context, CardFlipActivity.class);
-                        context.startActivity(intent);
+                Context context = view.getContext();
+                Intent intent = new Intent(context, CardFlipActivity.class);
+                context.startActivity(intent);
 
-                        finish();
-                }
-                return false;
+                finish();
+            }
+        });
+
+        mDeleteCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Decks.deleteCard(DeckPage.selectedDeck, CardAdapter.selectedCard);
+
+                CardAdapter.selectedCard = null;
+
+                StudyPage.mAdapter.notifyDataSetChanged();
+
+                finish();
             }
         });
     }

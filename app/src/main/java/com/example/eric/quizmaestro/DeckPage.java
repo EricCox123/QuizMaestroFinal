@@ -89,6 +89,7 @@ public class DeckPage extends Fragment {
 
         FloatingActionButton fab = view.findViewById(R.id.fab);
         fab.setImageResource(android.R.drawable.ic_input_add);
+
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

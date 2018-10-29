@@ -8,45 +8,28 @@
 
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="107dp"
-        android:layout_alignParentTop="false"
-        android:text="Welcome to QuizMaestro"
+        android:id="@+id/textView1"
+        android:layout_width="356dp"
+        android:layout_height="355dp"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:textColor="@color/textColor"
-        android:id="@+id/line1"
-        android:layout_below="@+id/toolbar"
-        android:textSize="25dp"
-        android:paddingTop="67dp"
-        android:paddingBottom="4dp"
-        />
+        android:layout_marginBottom="198dp"
+        android:gravity="center"
+        android:text="To begin, go to your decks page and press the plus button to create a new deck.
 
-    <TextView
+From there you can select the deck and begin adding and reviewing your flash cards.
+
+  "
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/gotoDecks"
         android:layout_width="wrap_content"
-        android:layout_height="60dp"
-        android:layout_alignParentTop="false"
-        android:text="-To add a deck, press the top left menu icon and press Decks."
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:textColor="@color/textColor"
-        android:id="@+id/line2"
-        android:layout_below="@+id/line1"
-        android:textSize="22dp"
-        android:paddingTop="6dp"
-        android:paddingBottom="2dp" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="60dp"
-        android:layout_alignParentTop="false"
-        android:text="-Press the bottom right plus symbol to add new Decks/Cards."
-        android:layout_centerHorizontal="true"
-        android:textColor="@color/textColor"
-        android:id="@+id/line3"
-        android:layout_below="@+id/line2"
-        android:textSize="22dp"
-        android:paddingTop="6dp"
-        android:paddingBottom="2dp" />
-
-        </RelativeLayout>
+        android:layout_marginTop="432dp"
+        android:text="Go to my Decks" />
 
 
-
+</RelativeLayout>

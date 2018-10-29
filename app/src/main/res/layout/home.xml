@@ -9,12 +9,23 @@
 
     <TextView
         android:id="@+id/textView1"
-        android:layout_width="181dp"
-        android:layout_height="103dp"
+        android:layout_width="269dp"
+        android:layout_height="94dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="380dp"
+        android:layout_marginBottom="389dp"
         android:gravity="center"
-        android:text="Welcome to QuizMaestro" />
+        android:text="Welcome to QuizMaestro!"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/gotoDecks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="286dp"
+        android:text="Go to my Decks" />
+
 
 </RelativeLayout>

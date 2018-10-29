@@ -56,11 +56,10 @@ public class CreateDeck extends Fragment {
                                 DeckPage deckPage = new DeckPage();
                                 fragmentTransaction.replace(R.id.content_frame, deckPage);
                                 fragmentTransaction.addToBackStack(null);
-
+                                Snackbar.make(view, "Deck: " + deckName + " created.", Snackbar.LENGTH_LONG)
+                                        .setAction("Action", null).show();
                                 // Commit the transaction
                                 fragmentTransaction.commit();
-                                Snackbar.make(mView, "Deck: " + deckName + " Created", Snackbar.LENGTH_LONG)
-                                        .setAction("Action", null).show();
                             }
                             else {
                                 Snackbar.make(mView, "A deck with this name already exists", Snackbar.LENGTH_LONG)

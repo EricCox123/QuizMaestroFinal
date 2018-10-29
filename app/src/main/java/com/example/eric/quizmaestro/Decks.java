@@ -89,6 +89,16 @@ public class Decks {
         }
     }
 
+    public static void deleteCard(String deckName, Card card) {
+        if (decks.containsKey(deckName)) {
+            ArrayList<Card> deck = decks.get(deckName);
+
+            if (deck.contains(card)) {
+                deck.remove(card);
+            }
+        }
+    }
+
     public static Card createCard(String question, String answer) {
         Card card = new Card(question, answer);
         return card;

@@ -43,6 +43,15 @@ public class MainActivity extends AppCompatActivity {
 
         try {
             NavigationView navigationView = findViewById(R.id.nav_view);
+
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+            HomeFragment homeFragment = new HomeFragment();
+            fragmentTransaction.replace(R.id.content_frame, homeFragment);
+            fragmentTransaction.addToBackStack(null);
+            fragmentTransaction.commit();
+
             navigationView.setNavigationItemSelectedListener(
                     new NavigationView.OnNavigationItemSelectedListener() {
                         @Override
@@ -77,24 +86,23 @@ public class MainActivity extends AppCompatActivity {
                                 fragmentTransaction.replace(R.id.content_frame, deckPage);
                                 fragmentTransaction.addToBackStack(null);
 
-                                // Commit the transaction
                                 fragmentTransaction.commit();
                             }
+
                             if (menuItem.getTitle().equals("Help")) {
                                 HelpPage helpPage = new HelpPage();
 
                                 fragmentTransaction.replace(R.id.content_frame, helpPage);
                                 fragmentTransaction.addToBackStack(null);
 
-                                // Commit the transaction
                                 fragmentTransaction.commit();
                             }
 
                             return true;
                         }
                     });
-
-
+            // Set 'home' as selected
+            navigationView.getMenu().getItem(0).setChecked(true);
         }
         catch(Exception e) {
             Log.d("ERROR ANT ERROR", e.getMessage());
