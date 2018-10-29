@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="107dp"
+        android:layout_alignParentTop="false"
+        android:text="Welcome to QuizMaestro"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/textColor"
+        android:id="@+id/line1"
+        android:layout_below="@+id/toolbar"
+        android:textSize="25dp"
+        android:paddingTop="67dp"
+        android:paddingBottom="4dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="false"
+        android:text="-To add a deck, press the top left menu icon and press Decks."
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/textColor"
+        android:id="@+id/line2"
+        android:layout_below="@+id/line1"
+        android:textSize="22dp"
+        android:paddingTop="6dp"
+        android:paddingBottom="2dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="false"
+        android:text="-Press the bottom right plus symbol to add new Decks/Cards."
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/textColor"
+        android:id="@+id/line3"
+        android:layout_below="@+id/line2"
+        android:textSize="22dp"
+        android:paddingTop="6dp"
+        android:paddingBottom="2dp" />
+
+        </RelativeLayout>
+
+
+
