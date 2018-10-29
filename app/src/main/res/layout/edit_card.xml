@@ -30,6 +30,8 @@
         android:text="" />
 
     <Button
+        style="@style/Widget.AppCompat.Button.Colored"
+
         android:id="@+id/edit_card_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -41,6 +43,8 @@
         android:text="Edit Card" />
 
     <Button
+        style="@style/Widget.AppCompat.Button.Colored"
+
         android:id="@+id/delete_card_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

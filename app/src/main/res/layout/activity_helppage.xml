@@ -23,6 +23,7 @@ From there you can select the deck and begin adding and reviewing your flash car
         android:textSize="20dp" />
 
     <Button
+        style="@style/Widget.AppCompat.Button.Colored"
         android:id="@+id/gotoDecks"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
