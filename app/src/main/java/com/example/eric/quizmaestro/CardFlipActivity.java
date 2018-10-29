@@ -3,13 +3,17 @@ package com.example.eric.quizmaestro;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class CardFlipActivity extends FragmentActivity {
 
@@ -112,15 +116,40 @@ public class CardFlipActivity extends FragmentActivity {
         context.startActivity(intent);
     }
 
-    public void rateCardEasy(View view) {
-        finish();
+    public void rateCardEasy(View view){
+            Snackbar.make(view, "Rated card as Easy.", Snackbar.LENGTH_LONG)
+                    .setAction("Action", null).show();
+        new Handler().postDelayed(new Runnable() {
+
+            @Override
+            public void run() {
+                finish();
+            }
+        }, 1000);
+
     }
 
     public void rateCardMedium(View view) {
-        finish();
+        Snackbar.make(view, "Rated card as Medium.", Snackbar.LENGTH_LONG)
+                .setAction("Action", null).show();
+        new Handler().postDelayed(new Runnable() {
+
+            @Override
+            public void run() {
+                finish();
+            }
+        }, 1000);
     }
 
     public void rateCardHard(View view) {
-        finish();
+        Snackbar.make(view, "Rated card as Hard.", Snackbar.LENGTH_LONG)
+                .setAction("Action", null).show();
+        new Handler().postDelayed(new Runnable() {
+
+            @Override
+            public void run() {
+                finish();
+            }
+        }, 1000);
     }
 }

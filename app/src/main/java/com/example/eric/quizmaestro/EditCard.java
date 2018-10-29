@@ -29,8 +29,8 @@ public class EditCard extends AppCompatActivity {
         mEditCard = findViewById(R.id.edit_card_button);
         mDeleteCard = findViewById(R.id.delete_card_button);
 
-        mEditQuestion.setHint(CardAdapter.selectedCard.getQuestion());
-        mEditAnswer.setHint(CardAdapter.selectedCard.getAnswer());
+        mEditQuestion.setText(CardAdapter.selectedCard.getQuestion());
+        mEditAnswer.setText(CardAdapter.selectedCard.getAnswer());
 
         mEditCard.setOnClickListener(new View.OnClickListener() {
             @Override

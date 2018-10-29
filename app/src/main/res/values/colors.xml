@@ -5,4 +5,6 @@
     <color name="colorAccent">#D81B60</color>
     <color name="mainBG">#000000</color>
     <color name="cardBG">#FF98E9</color>
+    <color name="white">#FFFFFF</color>
+    <color name="red">#F02522</color>
 </resources>

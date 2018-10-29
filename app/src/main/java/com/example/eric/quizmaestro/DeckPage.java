@@ -2,6 +2,9 @@ package com.example.eric.quizmaestro;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
+import android.graphics.drawable.Drawable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
@@ -43,18 +46,24 @@ public class DeckPage extends Fragment {
 
         Decks.addCardToDeck("Math",
                 new Card("What is 6 x 7?", "42"));
+        Decks.addCardToDeck("Math",
+                new Card("Integrals are used to?", "Find area under a curve"));
         Decks.addCardToDeck("Girlfriend",
                 new Card("When is her birthday?", "April 12th"));
+        Decks.addCardToDeck("Girlfriend",
+                new Card("What is her middle name?", "Samantha"));
+        Decks.addCardToDeck("Girlfriend",
+                new Card("Does she like olives?", "NO!!!"));
         Decks.addCardToDeck("Science!",
-                new Card("Scientific Method i:", "stuff"));
+                new Card("Scientific Method is?:", "A way to ensure reliable hypothesis testing"));
         Decks.addCardToDeck("Science!",
-                new Card("Scientific Method :", "stuff"));
+                new Card("How big is Earth?", "Pretty big"));
         Decks.addCardToDeck("Science!",
-                new Card("Scientific Method:", "stuff"));
+                new Card("Albert Einstein's birthday", "March 14th"));
         Decks.addCardToDeck("Science!",
-                new Card("Scientific Metho:", "stuff"));
+                new Card("People don't think it be like it is", "but it do"));
         Decks.addCardToDeck("Science!",
-                new Card("Scientific Meth:", "stuff"));
+                new Card("Is Bigfoot real", "maybe?"));
 
         // Get all the deck names from the Decks container
         values = Decks.decks.keySet().toArray(new String[Decks.decks.keySet().size()]);

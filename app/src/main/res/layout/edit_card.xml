@@ -44,15 +44,16 @@
 
     <Button
         style="@style/Widget.AppCompat.Button.Colored"
-
         android:id="@+id/delete_card_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
+        android:layout_alignParentBottom="false"
         android:layout_marginStart="0dp"
-        android:layout_marginBottom="227dp"
+        android:layout_marginBottom="265dp"
+        android:layout_below="@+id/edit_card_button"
         android:gravity="center"
-        android:text="Delete Card" />
+        android:text="Delete Card"
+        android:background="@color/red"/>
 
 </RelativeLayout>

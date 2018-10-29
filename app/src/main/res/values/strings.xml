@@ -1,8 +1,11 @@
 <resources>
     <string name="app_name">QuizMaestro</string>
+
+
     <string name="home">Home</string>
     <string name="decks">Decks</string>
     <string name="help">Help</string>
+
 
 <string-array name="Menu">
     <item>Menu</item>
